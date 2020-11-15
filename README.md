@@ -67,9 +67,7 @@ bundle exec jekyll serve
 ```
 1. go to gem file add  gem "kramdown-parser-gfm"
 
-2. open terminal and give command bundler
-
-3. after install all packages, in terminal give command bundle exec jekyll serve I hope application will run properly now.
+2. open terminal and give command 'bundle isntall'
 ```
 
 ## Contribution

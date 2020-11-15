@@ -41,6 +41,37 @@ and also to make use of plenty of jekyll plugins.
 - Update bundled gems by using `bundle` command.
 - Add `theme    : "lone-wolf-theme"` to your `_config.yml`.
 
+## Run in Local
+
+### First
+
+Ruby+Devkit Install
+
+### Start Command Prompt with Ruby
+
+```
+gem install jekyll
+gem install minima
+gem install bundler
+gem install jekyll-feed
+gem install tzinfo-data
+gem kramdown-parser-gfm
+
+chcp 65001
+bundle exec jekyll serve
+```
+
+## ERROR
+
+#### Dependency Error: Yikes! It looks like you don't have kramdown-parser-gfm or one of its dependencies installed.
+```
+1. go to gem file add  gem "kramdown-parser-gfm"
+
+2. open terminal and give command bundler
+
+3. after install all packages, in terminal give command bundle exec jekyll serve I hope application will run properly now.
+```
+
 ## Contribution
 
 Use the link to learn how to [contribute][3] to LWT.

@@ -1,18 +1,75 @@
 ---
 layout: default
+feature_rows:
+    - img_path: "PJT1.png"
+      img_alt: ''
+      url: "https://github.com/milkcat1994/SSAFYPJT_1"
+      title: '편집'
+      excerpt: "Project1"
+    - img_path: "PJT2.png"
+      img_alt: ''
+      url: "https://github.com/milkcat1994/SSAFYPJT_2"
+      title: '푸드메이트'
+      excerpt: "Project2"
 ---
 
-<section>
-  <div class="container mt-2 mb-2">
-    <div class="row">
-      <div class="col-sm">
-        <h1>Hello World</h1>
-      </div>
+{%- assign action_btn = page.action_btn[0] -%}
+{%- assign dropdown = page.action_btn[1].dropdown -%}
+{%- assign dropdown_items = page.action_btn[2].dropdown_items -%}
+
+<div class="home-page">
+  <!-- home page header -->
+  <section class="home-page-header">
+    <div class="container text-center">
+      <h1 class="animated fadeInDownBig">{{ page.title | default: 'Milkcat' }}</h1>
+      <p class="lead">{{ page.excerpt | default: 'Web Developer' }}</p>
+      {%- if page.action -%}
+        {%- include home-action-btn.html action_btn=action_btn dropdown=dropdown dropdown_items=dropdown_items -%}
+      {%- endif -%}
     </div>
-    <div class="row">
-      <div class="col-sm">
-        <p>Welcome to my theme, <a href="{{ '/welcome/' | relative_url }}">Lone Wolf Theme</a></p>
+  </section>
+
+  <!-- home page features -->
+  <section class="home-page-features">
+    <div class="container">
+      {% if page.feature_rows %}
+      <div class="row">
+        {% for f_row in page.feature_rows %}
+        <!-- TODO use animate.css to animate on hover -->
+        <div class="col-md-4 p-0">
+          <div class="card border-0 m-3">
+            {% if f_row.img_path %}
+              {% capture img_path %}
+              {{ '/assets/images/' | relative_url | append: f_row.img_path }}
+              {% endcapture %}
+            {% endif %}
+
+            {% if f_row.img_alt %}
+              {% capture img_alt %}
+              {{ f_row.img_alt | default: 'Feature image' }}
+              {% endcapture %}
+            {% endif %}
+
+            <div class="shadow-sm rounded-top">
+              {% if img_path %}
+                <img class="img-fluid rounded-top" src="{{ img_path | strip }}" alt="{{ img_alt | strip }}">
+              {% endif %}
+            </div>
+
+            <div class="card-body bg-light border border-light border-top-0 rounded-bottom">
+              <a href="{{ f_row.url }}">
+                <h2 class="m-0">
+                  {{ f_row.title | strip | strip_html | strip_newlines | truncate: 10 }}
+                </h2>
+              </a>
+              <p class="card-text">{{ f_row.excerpt | strip | strip_html | strip_newlines | truncate: 200 }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
+      {% endif%}
     </div>
-  </div>
-</section>
+  </section>
+</div>
+

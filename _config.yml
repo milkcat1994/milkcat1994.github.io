@@ -11,9 +11,9 @@ bootswatch_theme         : "united" # cerulean, spacelab, united
 
 # site Settings
 lang                     : "en_US"
-title                    : "Lone Wolf Theme"
-description              : "A simple bootstrap based jekyll theme."
-url                      : # the base hostname & protocol for your site e.g. "https://manid2.github.io"
+title                    : "Milkcat Blog"
+description              : "Milkcat's Web Project"
+url                      : "https://milkcat1994.github.io/" # the base hostname & protocol for your site e.g. "https://manid2.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "manid2/lone-wolf-theme"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/teaser_default.png"

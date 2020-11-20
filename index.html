@@ -42,7 +42,7 @@ feature_rows:
       <div class="row">
         {% for f_row in page.feature_rows %}
         <!-- TODO use animate.css to animate on hover -->
-        <div class="col-md-4 p-0">
+        <div class="col-md-4 p-0 card-pjt" onclick="window.open('{{ f_row.url }}')">
           <div class="card border-0 m-3">
             {% if f_row.img_path %}
               {% capture img_path %}
@@ -63,11 +63,11 @@ feature_rows:
             </div>
 
             <div class="card-body bg-light border border-light border-top-0 rounded-bottom">
-              <a href="{{ f_row.url }}">
+              <span class="card-title">
                 <h2 class="m-0">
                   {{ f_row.title | strip | strip_html | strip_newlines | truncate: 10 }}
                 </h2>
-              </a>
+              </span>
               <p class="card-text">{{ f_row.excerpt | strip | strip_html | strip_newlines | truncate: 200 }}</p>
             </div>
           </div>

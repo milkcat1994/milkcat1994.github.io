@@ -68,7 +68,7 @@ feature_rows:
                   {{ f_row.title | strip | strip_html | strip_newlines | truncate: 10 }}
                 </h2>
               </span>
-              <p class="card-text">{{ f_row.excerpt | strip | strip_html | strip_newlines | truncate: 200 }}</p>
+              <p class="card-text card-sub-title">{{ f_row.excerpt | strip | strip_html | strip_newlines | truncate: 200 }}</p>
             </div>
           </div>
         </div>

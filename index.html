@@ -42,8 +42,8 @@ feature_rows:
       <div class="row">
         {% for f_row in page.feature_rows %}
         <!-- TODO use animate.css to animate on hover -->
-        <div class="col-md-4 p-0 card-pjt" onclick="window.open('{{ f_row.url }}')">
-          <div class="card border-0 m-3">
+        <div class="col-md-4 p-0">
+          <div class="card border-0 m-3 card-pjt" onclick="window.open('{{ f_row.url }}')">
             {% if f_row.img_path %}
               {% capture img_path %}
               {{ '/assets/images/' | relative_url | append: f_row.img_path }}

@@ -1,14 +1,14 @@
 # header links
 header:
-  - title: "프로젝트"
-    url: "/project/"
-    description: "List of features in the theme"
+  # - title: "프로젝트"
+  #   url: "/project/"
+  #   description: "List of features in the theme"
   # - title: "Source"
   #   url: "/source/"
   #   description: "Theme source code"
-  - title: "About"
-    url: "/about/"
-    description: "A little story about the theme"
+  # - title: "About"
+  #   url: "/about/"
+  #   description: "A little story about the theme"
 
 # footer links
 footer:

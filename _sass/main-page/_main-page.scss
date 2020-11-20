@@ -2,6 +2,10 @@
  * main Page
  */
 
+.site-logo{
+    border-radius: 10em;
+}
+
 .card-pjt {
     &:hover{
      cursor: pointer;
@@ -9,5 +13,5 @@
 }
 
 .card-title{
-    color:#16697a;
+    color:#ff9642;
 }
